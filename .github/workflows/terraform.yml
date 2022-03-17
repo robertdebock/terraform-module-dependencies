@@ -23,8 +23,8 @@ jobs:
       - name: terraform apply
         uses: robertdebock/terraform-action@1.1.2
         with:
-          action: apply
+          action: apply -auto-approve
       - name: terraform destroy
         uses: robertdebock/terraform-action@1.1.2
         with:
-          action: destroy
+          action: destroy -auto-approve
