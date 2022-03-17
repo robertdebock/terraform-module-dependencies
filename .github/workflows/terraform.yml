@@ -23,8 +23,12 @@ jobs:
       - name: terraform apply
         uses: robertdebock/terraform-action@1.1.2
         with:
-          action: apply -auto-approve
+          action: apply
+        env:
+          TF_CLI_ARGS: "-input=false -auto-approve"
       - name: terraform destroy
         uses: robertdebock/terraform-action@1.1.2
         with:
-          action: destroy -auto-approve
+          action: destroy
+        env:
+          TF_CLI_ARGS: "-input=false -auto-approve"
